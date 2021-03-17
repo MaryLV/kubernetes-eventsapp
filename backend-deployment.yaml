@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: events-backend
+  name: events-backend
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: events-backend
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: events-backend
+    spec:
+      containers:
+      - image: gcr.io/mar-roidtc313/backend-dockerimage
+        name: events-backend
+        imagePullPolicy: "Always"
+        resources:
+          requests:
+            memory: "128Mi"
+            cpu: "0.1"
+          limits:
+            memory: "256Mi"
+            cpu: "0.2"
+status: {}
