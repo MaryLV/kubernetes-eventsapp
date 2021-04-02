@@ -16,7 +16,7 @@ spec:
         app: events-backend
     spec:
       containers:
-      - image: gcr.io/mar-roidtc313/backend-dockerimage
+      - image: gcr.io/mar-roidtc313/backend-dockerimage:v1.0
         name: events-backend
         imagePullPolicy: "Always"
         resources:
